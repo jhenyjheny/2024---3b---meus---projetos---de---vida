@@ -5,11 +5,12 @@
     --pink:#FF3EA5;
     --rosa:#FF7ED4;
     --rosa-chiclete:#FFB5DA;
+    --preto: #000;
 --font-titulo: "Oswald", sans-serif;
 --font-texto: "Roboto Condensed", sans-serif;
 }
 body{
-    background-color: var(--roxo);
+    background-color: var(--pink);
     color:var(--rosa-chiclete);
     font-family: var(--font-texto);
 }
@@ -23,3 +24,55 @@ body{
     margin: 0 auto;
     
 }
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 36px;
+}
+.titulo-principal span{
+    color: var(--roxo)
+}
+.botao{
+    font-family: var(--font-texto);
+    font-size: 18px;
+    background-color: var(--rosa-chiclete);
+    color: var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+    border-bottom: 4px solid var(--preto);
+    border-left: 4px solid var(--preto);
+    border-right: 4px solid var(--preto);
+    border-top: none;
+
+}
+.botoes{
+    display: block;
+}
+
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
+
+.botao:last-child{
+    border-radius: 0 0 40px 40px;
+}
+.ativo{
+    background-color: var(--roxo);
+    border-bottom: 4px solid var(--roxo);
+}
+
+    @media screen and (min-width: 768px){
+        .botoes{
+            display: flex;
+        }
+        .botao:first-child{
+            border-radius: 440px 0 0;
+        }
+        .botao:last-child{
+            border-radius: 0 40px 0 0;
+        }
+        
+    }
